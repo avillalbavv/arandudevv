@@ -25,7 +25,7 @@ button { color: inherit; }
 
 .site-header { position: absolute; z-index: 20; top: 0; left: 0; width: 100%; border-bottom: 1px solid var(--line); }
 .header-inner { min-height: 6.25rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.brand { width: 9.5rem; height: 3.2rem; overflow: hidden; display: flex; align-items: center; }
+.brand { width: 9.5rem; display: block; }
 .brand img { width: 100%; mix-blend-mode: multiply; }
 .site-nav { display: flex; align-items: center; gap: clamp(1rem, 2.3vw, 2.8rem); font-size: 0.84rem; font-weight: 600; }
 .site-nav a { position: relative; }
