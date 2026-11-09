@@ -5,6 +5,8 @@
 - Navegación por anclas y retorno al inicio.
 - Menú móvil con apertura, cierre por enlace y cierre con Escape.
 - Formulario con validación nativa, mensajes accesibles, campo trampa y envío real a Supabase.
+- Acceso privado con inicio de sesión, activación inicial, cierre de sesión y renovación de token.
+- Panel protegido para leer consultas, filtrarlas y actualizar su estado.
 - Enlaces externos con `noopener noreferrer`.
 
 ## Accesibilidad
@@ -26,4 +28,5 @@
 - Tabla `contact_requests` con RLS activo.
 - Acceso público limitado a INSERT sobre columnas específicas.
 - Sin políticas públicas de lectura, actualización o eliminación.
+- Lectura y actualización de estado limitadas a usuarios autenticados incluidos en `private.admin_allowlist`.
 - Migraciones reproducibles guardadas en `supabase/migrations/`.

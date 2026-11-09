@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0d" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Panel privado — ARANDU DEV</title>
+    <link rel="icon" href="/assets/arandu-mark.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20261109-5" />
+  </head>
+  <body class="admin-page">
+    <header class="admin-header">
+      <a class="brand" href="/" aria-label="ARANDU DEV"><img src="/assets/arandu-wordmark.webp" alt="ARANDU DEV" width="1774" height="887" /></a>
+      <div><span data-admin-email></span><button class="admin-logout" type="button" data-logout>Cerrar sesión</button></div>
+    </header>
+    <main class="admin-shell" id="contenido">
+      <div class="admin-heading">
+        <div><p class="section-kicker">Área privada</p><h1>Consultas recibidas</h1><p>Mensajes enviados desde el formulario institucional.</p></div>
+        <button class="button button-outline" type="button" data-refresh>Actualizar</button>
+      </div>
+      <section class="admin-stats" aria-label="Resumen de consultas">
+        <article><span>Total</span><strong data-stat="total">—</strong></article>
+        <article><span>Nuevas</span><strong data-stat="new">—</strong></article>
+        <article><span>Contactadas</span><strong data-stat="contacted">—</strong></article>
+        <article><span>Cerradas</span><strong data-stat="closed">—</strong></article>
+      </section>
+      <div class="admin-toolbar">
+        <label>Filtrar por estado<select data-filter><option value="all">Todas</option><option value="new">Nuevas</option><option value="contacted">Contactadas</option><option value="closed">Cerradas</option><option value="spam">Spam</option></select></label>
+        <p class="admin-status" role="status" aria-live="polite"></p>
+      </div>
+      <section class="inbox" data-inbox aria-label="Bandeja de consultas"></section>
+    </main>
+    <script src="/admin.js?v=20261109-5" defer></script>
+  </body>
+</html>

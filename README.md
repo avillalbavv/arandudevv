@@ -22,7 +22,7 @@ Abrí `http://localhost:4173`.
 - Estados institucionales y datos pendientes: `content/site.json`.
 - Evidencia y origen de datos: `docs/FUENTES.md`.
 
-No actives la leyenda DNCP, MTESS, IPS o WhatsApp hasta contar con una confirmación documental y autorización de publicación.
+No actives la leyenda DNCP, IPS o WhatsApp hasta contar con una confirmación documental y autorización de publicación.
 
 ## Publicación en Cloudflare Pages
 
@@ -35,6 +35,8 @@ Si se vincula un dominio definitivo, actualizá la URL del sitemap y los metadat
 ## Formulario
 
 El formulario valida la consulta y registra el mensaje en Supabase. La tabla `contact_requests` tiene Row Level Security activo: el sitio público únicamente puede insertar los campos autorizados y no puede leer, modificar ni eliminar consultas.
+
+El acceso privado vive en `dist/login.html` y `dist/admin.html`. Solo los correos de `private.admin_allowlist` pueden leer las consultas y actualizar su estado. La primera cuenta autorizada es `avillalbavv01@gmail.com`.
 
 ## Identidad visual
 

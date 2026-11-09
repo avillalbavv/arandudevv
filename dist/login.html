@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f5" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Acceso privado — ARANDU DEV</title>
+    <link rel="icon" href="/assets/arandu-mark.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20261109-5" />
+  </head>
+  <body class="private-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="private-header">
+      <a class="brand" href="/" aria-label="Volver al sitio de ARANDU DEV"><img src="/assets/arandu-wordmark.webp" alt="ARANDU DEV" width="1774" height="887" /></a>
+      <a class="text-link" href="/">Volver al sitio ↑</a>
+    </header>
+    <main class="auth-shell" id="contenido">
+      <section class="auth-intro">
+        <p class="eyebrow"><span>AD</span> Área de gestión</p>
+        <h1>Acceso<br /><em>privado.</em></h1>
+        <p>Panel reservado para la administración de ARANDU DEV. Desde aquí se consultan y organizan los mensajes recibidos desde el sitio.</p>
+      </section>
+      <section class="auth-card" aria-labelledby="login-title">
+        <div class="auth-tabs" role="tablist" aria-label="Opciones de acceso">
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-auth-tab="login">Ingresar</button>
+          <button type="button" role="tab" aria-selected="false" data-auth-tab="activate">Primera activación</button>
+        </div>
+        <form id="login-form" data-auth-panel="login">
+          <p class="section-kicker">Cuenta autorizada</p>
+          <h2 id="login-title">Iniciar sesión</h2>
+          <label>Correo electrónico<input type="email" name="email" autocomplete="username" required /></label>
+          <label>Contraseña<input type="password" name="password" autocomplete="current-password" minlength="8" required /></label>
+          <button class="button button-primary" type="submit">Ingresar al panel</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <form id="activate-form" data-auth-panel="activate" hidden>
+          <p class="section-kicker">Configuración inicial</p>
+          <h2>Activar acceso</h2>
+          <p class="auth-note">La activación está reservada al correo administrativo autorizado.</p>
+          <label>Correo administrativo<input type="email" name="email" autocomplete="email" required /></label>
+          <label>Crear contraseña<input type="password" name="password" autocomplete="new-password" minlength="10" required /></label>
+          <button class="button button-primary" type="submit">Solicitar activación</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="auth-security">La sesión se conserva únicamente en este navegador. El acceso a los datos está protegido por autenticación y políticas de seguridad en la base de datos.</p>
+      </section>
+    </main>
+    <script src="/auth.js?v=20261109-5" defer></script>
+  </body>
+</html>

@@ -9,8 +9,9 @@
 
 - Constancia de Constitución EAS N.º 35700, emitida el 16/09/2026.
 - Constancia RUC de DNIT, emitida el 15/10/2026.
-- La web publica únicamente denominación, régimen, RUC, actividad principal y ubicación general.
-- MTESS, IPS y DNCP no se publican como registros concluidos. Sus estados quedan desactivados en `content/site.json`.
+- La web publica denominación, régimen, RUC activo, actividad principal, ubicación general, facturación electrónica, registro MIPYMES y registro MTESS según la información institucional provista por la empresa.
+- Referencias públicas: SUACE/MIC, DNIT, Viceministerio de MIPYMES y MTESS. Los enlaces dirigen a las páginas oficiales de cada organismo y no implican patrocinio.
+- IPS y DNCP no se publican como registros concluidos. Sus estados quedan desactivados en `content/site.json`.
 
 ## Proyectos archivados
 
@@ -23,6 +24,6 @@
 
 - Número corporativo de WhatsApp.
 - Conclusión y leyenda autorizada del Registro de Proveedores del Estado — DNCP.
-- Estado documental de registros patronales MTESS e IPS.
+- Estado documental del registro patronal IPS.
 - Dominio definitivo y URL canónica.
 - Servicio transaccional para enviar y notificar formularios sin depender del cliente de correo del visitante.
