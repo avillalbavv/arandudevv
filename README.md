@@ -21,7 +21,7 @@ No abras `index.html` directamente con `file://`, ya que las políticas del nave
 
 ## Despliegue
 
-El directorio de salida es la raíz del repositorio. No requiere comando de compilación.
+El directorio de salida es la raíz del repositorio. No requiere comando de compilación. La rama `main` se publica automáticamente en Cloudflare Pages.
 
 ## Base de datos
 
