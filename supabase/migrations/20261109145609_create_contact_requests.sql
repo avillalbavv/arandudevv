@@ -16,9 +16,7 @@ grant insert (full_name, email, organization, phone, message, source)
 on table public.contact_requests to anon, authenticated;
 
 create policy "public_can_submit_contact_requests"
-on public.contact_requests
-for insert
-to anon, authenticated
+on public.contact_requests for insert to anon, authenticated
 with check (
   source = 'website'
   and status = 'new'

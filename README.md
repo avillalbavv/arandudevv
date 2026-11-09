@@ -1,28 +1,41 @@
-# ARANDU DEV
+# ARANDU WEB
 
-Sitio institucional oficial de ARANDU DEV — Tecnología con propósito.
+Sitio institucional de ARANDU DEV E.A.S. UNIPERSONAL.
 
-## Estructura
+## Arquitectura
 
-- Sitio estático compatible con Cloudflare Pages.
-- Formulario conectado a Supabase mediante una clave publicable.
-- Tabla `contact_requests` protegida con Row Level Security.
-- Diseño responsive, navegación accesible y preferencias de movimiento reducido.
+El sitio es HTML, CSS y JavaScript sin framework. Esta elección reduce dependencias, acelera la carga y mantiene el contenido institucional fácil de revisar. Los archivos publicados viven en `dist/`.
 
 ## Desarrollo local
 
-Servir la carpeta raíz con cualquier servidor HTTP estático, por ejemplo:
-
 ```bash
-npx serve .
+python3 -m http.server 4173 --directory dist
 ```
 
-No abras `index.html` directamente con `file://`, ya que las políticas del navegador pueden impedir las solicitudes del formulario.
+Abrí `http://localhost:4173`.
 
-## Despliegue
+## Actualización
 
-El directorio de salida es la raíz del repositorio. No requiere comando de compilación. La rama `main` se publica automáticamente en Cloudflare Pages.
+- Textos y secciones: `dist/index.html`.
+- Estilos: `dist/styles.css`.
+- Interacciones: `dist/script.js`.
+- Estados institucionales y datos pendientes: `content/site.json`.
+- Evidencia y origen de datos: `docs/FUENTES.md`.
 
-## Base de datos
+No actives la leyenda DNCP, MTESS, IPS o WhatsApp hasta contar con una confirmación documental y autorización de publicación.
 
-La migración reproducible se encuentra en `supabase/migrations/`.
+## Publicación en Cloudflare Pages
+
+- Directorio de salida: `dist`
+- Comando de compilación: ninguno
+- Versión de Node: no requerida
+
+Si se vincula un dominio definitivo, actualizá la URL del sitemap y los metadatos canónicos antes de publicar.
+
+## Formulario
+
+El formulario valida la consulta y registra el mensaje en Supabase. La tabla `contact_requests` tiene Row Level Security activo: el sitio público únicamente puede insertar los campos autorizados y no puede leer, modificar ni eliminar consultas.
+
+## Identidad visual
+
+La renovación conserva la arquitectura y la narrativa del sitio institucional original. Utiliza la composición monocromática oficial, Space Grotesk y Manrope, con una paleta limitada a negro, blanco y grises.

@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "legalName": "ARANDU DEV E.A.S. UNIPERSONAL",
+    "commercialName": "ARANDU DEV",
+    "email": "arandudev@gmail.com",
+    "location": "Piribebuy, Cordillera, Paraguay"
+  },
+  "registrations": {
+    "ruc": "80180147-8",
+    "primaryActivity": "62010 - Actividades de programación informática",
+    "easLaw": "Ley N.º 6480/2020",
+    "dncp": {
+      "status": "en_tramite",
+      "public": false,
+      "futureLabel": "Inscripta en el Registro de Proveedores del Estado — DNCP."
+    },
+    "mtess": { "status": "pendiente_de_verificacion", "public": false },
+    "ips": { "status": "pendiente_de_verificacion", "public": false }
+  },
+  "futureContact": {
+    "whatsapp": null,
+    "publishWhenConfirmed": false
+  }
+}

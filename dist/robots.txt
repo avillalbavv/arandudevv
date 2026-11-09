@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arandudevv.pages.dev/sitemap.xml
