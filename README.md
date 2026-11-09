@@ -30,7 +30,7 @@ No actives la leyenda DNCP, IPS o WhatsApp hasta contar con una confirmación do
 - Comando de compilación: ninguno
 - Versión de Node: no requerida
 
-Si se vincula un dominio definitivo, actualizá la URL del sitemap y los metadatos canónicos antes de publicar.
+Dominio canónico de producción: `https://arandudev.com/`.
 
 ## Formulario
 
