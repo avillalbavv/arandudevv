@@ -30,7 +30,7 @@ No actives la leyenda DNCP, IPS o WhatsApp hasta contar con una confirmación do
 - Comando de compilación: ninguno
 - Versión de Node: no requerida
 
-Dominio canónico de producción: `https://arandudev.com/`.
+Dominio canónico de producción: `https://www.arandudev.com/`.
 
 ## Formulario
 

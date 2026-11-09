@@ -71,7 +71,7 @@ document.querySelector('#activate-form')?.addEventListener('submit', async (even
   if (email !== ADMIN_EMAIL) return setFormState(form, false, 'La activación está limitada al correo administrativo autorizado.', 'error');
   setFormState(form, true, 'Creando acceso seguro…');
   try {
-    const result = await authRequest(`signup?redirect_to=${encodeURIComponent('https://arandudev.com/login.html')}`, { email, password: String(data.get('password')), data: { area: 'administracion' } });
+    const result = await authRequest(`signup?redirect_to=${encodeURIComponent('https://www.arandudev.com/login.html')}`, { email, password: String(data.get('password')), data: { area: 'administracion' } });
     if (result.access_token) {
       saveSession(result);
       window.location.replace('/admin.html');
