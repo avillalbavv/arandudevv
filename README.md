@@ -36,7 +36,7 @@ Dominio canónico de producción: `https://www.arandudev.com/`.
 
 El formulario valida la consulta y registra el mensaje en Supabase. La tabla `contact_requests` tiene Row Level Security activo: el sitio público únicamente puede insertar los campos autorizados y no puede leer, modificar ni eliminar consultas.
 
-El acceso privado vive en `dist/login.html` y `dist/admin.html`. Solo los correos de `private.admin_allowlist` pueden leer las consultas y actualizar su estado. La primera cuenta autorizada es `avillalbavv01@gmail.com`.
+El acceso privado vive en `dist/login.html` y `dist/admin.html`. Solo los correos de `private.admin_allowlist` pueden leer las consultas y actualizar su estado. `administracion@arandudev.com` tiene rol `super_admin`; `avillalbavv01@gmail.com` permanece como cuenta administrativa.
 
 ## Identidad visual
 

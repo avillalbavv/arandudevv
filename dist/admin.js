@@ -1,6 +1,7 @@
 const SUPABASE_URL = 'https://kowweaeczkpylzuvsrtd.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_w8PxuQJjg6XB9X5I8TryOg_Tjkh7vzj';
-const ADMIN_EMAIL = 'avillalbavv01@gmail.com';
+const ADMIN_EMAILS = ['avillalbavv01@gmail.com', 'administracion@arandudev.com'];
+const SUPER_ADMIN_EMAIL = 'administracion@arandudev.com';
 const SESSION_KEY = 'arandu_admin_session';
 let requests = [];
 
@@ -92,7 +93,9 @@ document.querySelector('[data-logout]')?.addEventListener('click', async () => {
   const response = await authenticatedFetch('/auth/v1/user');
   if (!response?.ok) return clearSession();
   const user = await response.json();
-  if (String(user.email || '').toLowerCase() !== ADMIN_EMAIL) return clearSession();
+  const email = String(user.email || '').toLowerCase();
+  if (!ADMIN_EMAILS.includes(email)) return clearSession();
   document.querySelector('[data-admin-email]').textContent = user.email;
+  document.querySelector('[data-admin-role]').textContent = email === SUPER_ADMIN_EMAIL ? 'Superadministrador' : 'Administrador';
   loadRequests();
 })();

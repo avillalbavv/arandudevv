@@ -1,6 +1,6 @@
 const SUPABASE_URL = 'https://kowweaeczkpylzuvsrtd.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_w8PxuQJjg6XB9X5I8TryOg_Tjkh7vzj';
-const ADMIN_EMAIL = 'avillalbavv01@gmail.com';
+const ADMIN_EMAILS = ['avillalbavv01@gmail.com', 'administracion@arandudev.com'];
 const SESSION_KEY = 'arandu_admin_session';
 
 const tabs = document.querySelectorAll('[data-auth-tab]');
@@ -51,7 +51,7 @@ document.querySelector('#login-form')?.addEventListener('submit', async (event) 
   if (!form.checkValidity()) return form.reportValidity();
   const data = new FormData(form);
   const email = String(data.get('email')).trim().toLowerCase();
-  if (email !== ADMIN_EMAIL) return setFormState(form, false, 'Esta cuenta no está autorizada para el panel.', 'error');
+  if (!ADMIN_EMAILS.includes(email)) return setFormState(form, false, 'Esta cuenta no está autorizada para el panel.', 'error');
   setFormState(form, true, 'Verificando acceso…');
   try {
     const session = await authRequest('token?grant_type=password', { email, password: String(data.get('password')) });
@@ -68,7 +68,7 @@ document.querySelector('#activate-form')?.addEventListener('submit', async (even
   if (!form.checkValidity()) return form.reportValidity();
   const data = new FormData(form);
   const email = String(data.get('email')).trim().toLowerCase();
-  if (email !== ADMIN_EMAIL) return setFormState(form, false, 'La activación está limitada al correo administrativo autorizado.', 'error');
+  if (!ADMIN_EMAILS.includes(email)) return setFormState(form, false, 'La activación está limitada a los correos administrativos autorizados.', 'error');
   setFormState(form, true, 'Creando acceso seguro…');
   try {
     const result = await authRequest(`signup?redirect_to=${encodeURIComponent('https://www.arandudev.com/login.html')}`, { email, password: String(data.get('password')), data: { area: 'administracion' } });

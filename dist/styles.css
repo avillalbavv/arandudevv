@@ -227,6 +227,7 @@ button { color: inherit; }
 .admin-header { position: sticky; z-index: 20; top: 0; color: var(--white); background: var(--ink); border-color: rgba(255,255,255,.18); }
 .admin-header .brand img { filter: invert(1); mix-blend-mode: screen; }
 .admin-header > div { display: flex; align-items: center; gap: 20px; font-size: .72rem; }
+.admin-role { padding: 5px 8px; border: 1px solid rgba(255,255,255,.48); font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .admin-logout { padding: 9px 12px; border: 1px solid rgba(255,255,255,.5); color: var(--white); background: transparent; cursor: pointer; }
 .admin-shell { width: var(--page); margin-inline: auto; padding-block: 72px 120px; }
 .admin-heading { display: flex; justify-content: space-between; gap: 40px; align-items: end; }

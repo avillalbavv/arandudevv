@@ -30,4 +30,5 @@
 - Acceso público limitado a INSERT sobre columnas específicas.
 - Sin políticas públicas de lectura, actualización o eliminación.
 - Lectura y actualización de estado limitadas a usuarios autenticados incluidos en `private.admin_allowlist`.
+- Roles administrativos persistidos en la base: `admin` y `super_admin`.
 - Migraciones reproducibles guardadas en `supabase/migrations/`.
