@@ -21,6 +21,7 @@
 - Sitio estático sin secretos ni dependencias de ejecución. La clave publicable de Supabase se protege mediante RLS.
 - Metadatos descriptivos y Open Graph, `robots.txt`, `sitemap.xml` y página 404.
 - Imágenes con dimensiones, texto alternativo y carga diferida en el portafolio.
+- Logotipo e isotipo visibles en PNG con canal alfa; favicon PNG en 32 y 64 píxeles.
 - Contenido institucional actualizable desde `content/site.json` y HTML editorial.
 
 ## Base de datos

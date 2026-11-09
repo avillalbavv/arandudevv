@@ -3,7 +3,9 @@
 ## Identidad
 
 - `Guia-de-marca-ARANDU-DEV.png`: fuente original de la identidad visual.
-- `dist/assets/arandu-wordmark.png` y `dist/assets/arandu-mark.png`: recortes sin redibujo ni generación del logotipo original.
+- `dist/assets/arandu-logo-transparent.png`: composición oficial extraída sin redibujo, con fondo transparente.
+- `dist/assets/arandu-isotipo-transparent.png`: isotipo oficial en lienzo cuadrado transparente.
+- `dist/assets/favicon-32.png` y `dist/assets/favicon-64.png`: favicon PNG derivado del isotipo oficial.
 
 ## Información institucional
 

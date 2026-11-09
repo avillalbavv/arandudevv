@@ -61,6 +61,7 @@ button { color: inherit; }
 .ad-field { position: relative; aspect-ratio: 1 / .94; margin: 24px 0; overflow: hidden; background: var(--ink); }
 .ad-field::before { position: absolute; inset: 0; content: ""; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 34px 34px; }
 .ad-frame { position: absolute; inset: 16%; border: 3px solid rgba(255,255,255,.9); }
+.hero-mark { position: absolute; z-index: 2; inset: 50% auto auto 50%; width: 78%; height: 78%; object-fit: contain; filter: invert(1); transform: translate(-50%, -50%); }
 .ad-axis { position: absolute; left: 18%; width: 74%; height: 9%; background: var(--white); transform-origin: left center; }
 .ad-axis-one { top: 68%; transform: rotate(-58deg); }
 .ad-axis-two { top: 20%; transform: rotate(58deg); }
@@ -158,8 +159,13 @@ button { color: inherit; }
 .institution-grid a { min-height: 210px; padding: 26px; display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid rgba(255,255,255,.2); transition: color .2s ease, background .2s ease; }
 .institution-grid a:last-child { border-right: 0; }
 .institution-grid a:hover, .institution-grid a:focus-visible { color: var(--ink); background: var(--white); }
-.institution-grid span { min-height: 38px; color: rgba(255,255,255,.58); font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.institution-grid a:hover span, .institution-grid a:focus-visible span { color: var(--muted); }
+.institution-grid a > span:not(.institution-mark) { min-height: 38px; color: rgba(255,255,255,.58); font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.institution-grid a:hover > span:not(.institution-mark), .institution-grid a:focus-visible > span:not(.institution-mark) { color: var(--muted); }
+.institution-mark { width: 66px; height: 66px; margin-bottom: 34px; display: grid; grid-template-columns: 1fr auto; align-items: end; border: 1px solid rgba(255,255,255,.48); overflow: hidden; }
+.institution-mark b { padding: 7px 0 7px 7px; font-family: var(--display); font-size: 1.25rem; font-weight: 500; line-height: 1; letter-spacing: -.08em; }
+.institution-mark i { height: 100%; padding: 7px 5px; display: flex; align-items: flex-end; color: var(--ink); background: var(--white); font-size: .48rem; font-style: normal; font-weight: 800; writing-mode: vertical-rl; transform: rotate(180deg); }
+.institution-grid a:hover .institution-mark, .institution-grid a:focus-visible .institution-mark { border-color: var(--ink); }
+.institution-grid a:hover .institution-mark i, .institution-grid a:focus-visible .institution-mark i { color: var(--white); background: var(--ink); }
 .institution-grid strong { margin-top: auto; font-family: var(--display); font-size: 1.55rem; font-weight: 500; line-height: 1.05; }
 .institution-grid small { margin-top: 14px; color: rgba(255,255,255,.55); line-height: 1.45; }
 .institution-grid a:hover small, .institution-grid a:focus-visible small { color: var(--muted); }
