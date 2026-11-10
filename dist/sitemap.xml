@@ -6,7 +6,27 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.arandudev.com/en.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.arandudev.com/pt.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.arandudev.com/terminos.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.arandudev.com/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.arandudev.com/termos.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -16,7 +36,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.arandudev.com/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.arandudev.com/privacidade.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.arandudev.com/cookies.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.arandudev.com/cookies-en.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.arandudev.com/cookies-pt.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
