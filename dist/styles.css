@@ -304,8 +304,13 @@ button { color: inherit; }
 .empty-state { padding: 60px 24px; text-align: center; background: var(--white); border: 1px solid var(--line); }
 .empty-state p { color: var(--muted); }
 
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal { opacity: 1; transform: none; }
+.reveal.is-visible { animation: reveal-in .7s var(--ease) both; }
+
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
 
 @media (max-width: 980px) {
   :root { --page: calc(100vw - 40px); }
