@@ -47,12 +47,22 @@ const messages = {
 const closeMenu = () => {
   menuButton?.setAttribute('aria-expanded', 'false');
   nav?.classList.remove('open');
+  document.body.classList.remove('menu-open');
 };
+
+const syncHeaderHeight = () => {
+  if (!header) return;
+  document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+};
+
+syncHeaderHeight();
+window.addEventListener('load', syncHeaderHeight, { once: true });
 
 menuButton?.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!open));
   nav?.classList.toggle('open', !open);
+  document.body.classList.toggle('menu-open', !open);
 });
 
 nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
@@ -61,13 +71,17 @@ document.addEventListener('click', (event) => {
   if (!nav.contains(event.target) && !menuButton?.contains(event.target)) closeMenu();
 });
 window.addEventListener('scroll', () => header?.classList.toggle('scrolled', window.scrollY > 12), { passive: true });
-window.addEventListener('resize', () => { if (window.innerWidth > 1120) closeMenu(); }, { passive: true });
+window.addEventListener('resize', () => {
+  syncHeaderHeight();
+  if (window.innerWidth > 1120) closeMenu();
+}, { passive: true });
 window.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (prefersReducedMotion) {
   document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
 } else {
+  document.documentElement.classList.add('motion-ready');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -75,7 +89,7 @@ if (prefersReducedMotion) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.06, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 }
 
